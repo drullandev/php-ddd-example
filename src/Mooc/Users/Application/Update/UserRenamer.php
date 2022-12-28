@@ -21,11 +21,11 @@ final class UserRenamer
 
     public function __invoke(UserId $id, UserName $newName): void
     {
-        $User = $this->finder->__invoke($id);
+        $user = $this->finder->__invoke($id);
 
-        $User->rename($newName);
+        $user->rename($newName);
 
-        $this->repository->save($User);
-        $this->bus->publish(...$User->pullDomainEvents());
+        $this->repository->save($user);
+        $this->bus->publish(...$user->pullDomainEvents());
     }
 }

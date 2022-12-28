@@ -17,12 +17,12 @@ final class UserFinder
 
     public function __invoke(UserId $id): User
     {
-        $User = $this->repository->search($id);
+        $user = $this->repository->search($id);
 
-        if (null === $User) {
+        if (null === $user) {
             throw new UserNotExist($id);
         }
 
-        return $User;
+        return $user;
     }
 }

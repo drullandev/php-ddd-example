@@ -12,9 +12,9 @@ use function Lambdish\Phunctional\map;
 
 final class ElasticsearchBackofficeUserRepository extends ElasticsearchRepository implements BackofficeUserRepository
 {
-    public function save(BackofficeUser $User): void
+    public function save(BackofficeUser $user): void
     {
-        $this->persist($User->id(), $User->toPrimitives());
+        $this->persist($user->id(), $user->toPrimitives());
     }
 
     public function searchAll(): array

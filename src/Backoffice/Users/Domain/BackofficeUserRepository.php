@@ -8,7 +8,7 @@ use CodelyTv\Shared\Domain\Criteria\Criteria;
 
 interface BackofficeUserRepository
 {
-    public function save(BackofficeUser $User): void;
+    public function save(BackofficeUser $user): void;
 
     public function searchAll(): array;
 

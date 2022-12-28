@@ -12,9 +12,9 @@ use CodelyTv\Shared\Infrastructure\Persistence\Doctrine\DoctrineRepository;
 
 final class MySqlBackofficeUserRepository extends DoctrineRepository implements BackofficeUserRepository
 {
-    public function save(BackofficeUser $User): void
+    public function save(BackofficeUser $user): void
     {
-        $this->persist($User);
+        $this->persist($user);
     }
 
     public function searchAll(): array

@@ -18,9 +18,9 @@ final class InMemoryCacheBackofficeUserRepository implements BackofficeUserRepos
     {
     }
 
-    public function save(BackofficeUser $User): void
+    public function save(BackofficeUser $user): void
     {
-        $this->repository->save($User);
+        $this->repository->save($user);
     }
 
     public function searchAll(): array

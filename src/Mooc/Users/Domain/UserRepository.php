@@ -8,7 +8,7 @@ use CodelyTv\Mooc\Users\Domain\UserName;
 
 interface UserRepository
 {
-    public function save(User $User): void;
+    public function save(User $user): void;
 
     public function search(UserId $id): ?User;
 }

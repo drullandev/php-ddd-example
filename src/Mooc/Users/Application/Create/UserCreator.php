@@ -18,9 +18,9 @@ final class UserCreator
 
     public function __invoke(UserId $id, UserName $name): void
     {
-        $User = User::create($id, $name);
+        $user = User::create($id, $name);
 
-        $this->repository->save($User);
-        $this->bus->publish(...$User->pullDomainEvents());
+        $this->repository->save($user);
+        $this->bus->publish(...$user->pullDomainEvents());
     }
 }

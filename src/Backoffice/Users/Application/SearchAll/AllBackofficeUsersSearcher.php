@@ -23,9 +23,9 @@ final class AllBackofficeUsersSearcher
 
     private function toResponse(): callable
     {
-        return static fn (BackofficeUser $User) => new BackofficeUserResponse(
-            $User->id(),
-            $User->name()
+        return static fn (BackofficeUser $user) => new BackofficeUserResponse(
+            $user->id(),
+            $user->name()
         );
     }
 }

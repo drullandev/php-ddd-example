@@ -15,11 +15,11 @@ final class User extends AggregateRoot
 
     public static function create(UserId $id, UserName $name): self
     {
-        $User = new self($id, $name);
+        $user = new self($id, $name);
 
-        $User->record(new UserCreatedDomainEvent($id->value(), $name->value()));
+        $user->record(new UserCreatedDomainEvent($id->value(), $name->value()));
 
-        return $User;
+        return $user;
     }
 
     public function id(): UserId
