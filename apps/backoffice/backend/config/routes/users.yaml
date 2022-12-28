@@ -1,0 +1,5 @@
+users_get:
+  path: /users
+  controller: CodelyTv\Apps\Backoffice\Backend\Controller\Users\UsersGetController
+  defaults: { auth: false }
+  methods:  [GET]
